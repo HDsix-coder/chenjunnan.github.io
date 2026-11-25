@@ -1,13 +1,780 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=index.html#/atlas">
-<title>ATLAS — HD 6.OS</title>
-<script>location.replace("index.html#/atlas");</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#050805">
+  <meta name="description" content="HD 6.OS world map: a set of nodes, a few signal loops, and coordinates left by the cursor.">
+  <title>ATLAS — HD 6.OS</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/atlas-data.js" defer></script>
+  <script src="assets/app.js" defer></script>
 </head>
-<body>
-<p>Redirecting to <a href="index.html#/atlas">ATLAS</a>…</p>
+<body data-page="atlas">
+  <a class="skip-link" href="#main" data-skip-link="">SKIP TO CONTENT</a>
+  <div class="crt" aria-hidden="true"></div>
+  <canvas class="code-rain" data-code-rain aria-hidden="true"></canvas>
+
+  <header class="topbar">
+
+
+      <a class="brand" href="index.html" aria-label="HD 6.OS — TERMINAL v2.0 home">
+
+
+        <span class="brand-mark" aria-hidden="true">C</span>
+
+
+        <span class="brand-name">~/HD 6<span class="slash">.OS</span></span>
+
+
+        <span class="brand-ver">v2.0</span>
+
+
+      </a>
+
+
+      <nav class="nav" aria-label="Primary navigation">
+
+
+        <a href="about.html" data-nav-route="about"><span class="nav-num">/</span>about</a>
+
+
+        <a href="work.html" data-nav-route="work"><span class="nav-num">/</span>work</a>
+
+
+        <a href="blog.html" data-nav-route="blog"><span class="nav-num">/</span>blog</a>
+
+
+        <a href="toolcase.html" data-nav-route="toolcase"><span class="nav-num">/</span>toolcase</a>
+
+
+        <a href="atlas.html" data-nav-route="atlas" aria-current="page" class="is-active"><span class="nav-num">/</span>atlas</a>
+
+
+      </nav>
+
+
+      <div class="sysline">
+
+
+        <span class="sys-status"><span class="dot" aria-hidden="true"></span>ONLINE</span>
+
+
+        <span class="clock"><span class="clock-label">LOCAL</span> <span data-clock>--:--:--</span></span>
+
+
+      </div>
+
+
+    </header>
+
+  <main id="main" class="subpage" tabindex="-1"><div class="crumbline">
+
+
+      <span class="crumb-path">~/atlas</span>
+
+
+      <span class="pagecode">PAGE 05 / 05</span>
+
+
+    </div>
+
+
+
+
+
+    <header class="pagehead">
+
+
+      <div>
+
+
+        <p class="eyebrow"><span class="bracket">[</span> SECTION 05 / CARTOGRAPHY <span class="bracket">]</span></p>
+
+
+        <h1 class="page-title">
+
+
+<span class="prompt">&gt;</span> ssh atlas<span class="cursor cursor--small" aria-hidden="true"></span>
+
+
+</h1>
+
+
+        <p class="page-lede">A world map that refuses to navigate. Only nodes, echoes, and a few unsent signals. Move closer.</p>
+
+
+      </div>
+
+
+      <dl class="filemeta">
+
+
+        <dt>FILE</dt>
+
+
+<dd>atlas.map</dd>
+
+
+        <dt>MODE</dt>
+
+
+<dd>LIVE</dd>
+
+
+        <dt>DATUM</dt>
+
+
+<dd>WGS84</dd>
+
+
+        <dt>UPDATED</dt>
+
+
+<dd>2026.11</dd>
+
+
+      </dl>
+
+
+    </header>
+
+
+
+
+
+    <section class="atlas-feature panel" aria-labelledby="atlas-map-title">
+
+
+      <div class="panel-bar">
+
+
+        <span id="atlas-map-title">world.map / dot geometry</span>
+
+
+        <span class="bar-state"><span class="dot"></span> LIVE FEED</span>
+
+
+      </div>
+
+
+
+
+
+      <div class="atlas-stage" data-atlas>
+
+
+        <canvas class="atlas-canvas" data-atlas-canvas role="img" aria-label="A world map of green dots marking twelve nodes: Shanghai, Wuhan, Tokyo, Singapore, London, Berlin, New York, San Francisco, São Paulo, Cape Town, Sydney, and Reykjavík." aria-describedby="atlas-map-desc"></canvas>
+
+
+        <p class="sr-only" id="atlas-map-desc">The map is a synthetic visual generated in the browser, not live geographic data. The node index supports keyboard selection and updates coordinates and notes.</p>
+
+
+        <span class="atlas-scan" aria-hidden="true"></span>
+
+
+        <span class="atlas-cursor" data-atlas-cursor aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+
+
+
+
+
+        <div class="atlas-hud atlas-hud--top" aria-hidden="true">
+
+
+          <span>[ WORLD / EQUIRECTANGULAR ]</span>
+
+
+          <span data-atlas-hover>TRACE / IDLE</span>
+
+
+        </div>
+
+
+        <div class="atlas-hud atlas-hud--bottom" aria-hidden="true">
+
+
+          <span data-atlas-coords>31.2304 N / 121.4737 E</span>
+
+
+          <span>NODES / 12 <span class="atlas-hud-sep">/</span> WGS84</span>
+
+
+        </div>
+
+
+
+
+
+        <div class="atlas-legend" aria-hidden="true">
+
+
+          <span><i class="atlas-key atlas-key--origin"></i>ORIGIN</span>
+
+
+          <span><i class="atlas-key atlas-key--relay"></i>RELAY</span>
+
+
+          <span><i class="atlas-key atlas-key--echo"></i>ECHO</span>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="atlas-foot">
+
+
+        <span data-atlas-status>TRACE / STABLE</span>
+
+
+        <span data-atlas-clock>UTC --:--:--</span>
+
+
+        <span>SYNTHETIC SIGNAL / NO TRACKING</span>
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+    <figure class="media-figure media-figure--wide atlas-plate">
+      <img src="assets/atlas-plate.png" alt="Printed atlas plate: green dot-matrix world map with twelve signal nodes and coordinate labels" width="1600" height="640" loading="lazy" decoding="async">
+      <figcaption><span><span class="media-index">05</span> / CARTOGRAPHY PLATE</span><span>DOT GEOMETRY / WGS84</span></figcaption>
+    </figure>
+
+    <div class="atlas-grid">
+
+
+      <div class="atlas-main">
+
+
+        <section class="atlas-index" aria-labelledby="atlas-node-title">
+
+
+          <h2 class="section-head" id="atlas-node-title">
+
+
+<span class="idx">01 /</span> NODE INDEX <span class="idx">12 NODES</span>
+
+
+</h2>
+
+
+          <div class="atlas-node-grid" data-atlas-list aria-label="World map nodes"></div>
+
+
+          <noscript><p class="atlas-noscript">NODE INDEX REQUIRES JAVASCRIPT.</p></noscript>
+
+
+        </section>
+
+
+
+
+
+        <div class="atlas-telemetry">
+
+
+          <article class="atlas-cell panel">
+
+
+            <span class="atlas-cell-label">ORIGIN</span>
+
+
+            <strong>SHANGHAI</strong>
+
+
+            <span>31.2304 N / 121.4737 E</span>
+
+
+          </article>
+
+
+          <article class="atlas-cell panel">
+
+
+            <span class="atlas-cell-label">ROUTES</span>
+
+
+            <strong>06 ACTIVE</strong>
+
+
+            <span>PACKET SIZE / SMALL</span>
+
+
+          </article>
+
+
+          <article class="atlas-cell panel">
+
+
+            <span class="atlas-cell-label">LAST SIGNAL</span>
+
+
+            <strong>00:00:00 AGO</strong>
+
+
+            <span>SYNTHETIC / LOCAL</span>
+
+
+          </article>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <aside class="sidebar atlas-side" aria-label="Map sidebar">
+
+
+        <section class="side-panel panel" aria-labelledby="atlas-selected-title">
+
+
+          <div class="panel-bar">
+
+
+            <span id="atlas-selected-title">SELECTED NODE</span>
+
+
+            <span data-atlas-index>01 / 12</span>
+
+
+          </div>
+
+
+          <div class="side-body atlas-selected" aria-live="polite">
+
+
+            <p class="atlas-node-kicker" data-atlas-code>NODE 01 / ORIGIN</p>
+
+
+            <h2 class="atlas-node-name" data-atlas-name>SHANGHAI</h2>
+
+
+            <p class="atlas-node-meta" data-atlas-meta>ORIGIN NODE / STABLE</p>
+
+
+            <p class="atlas-node-note" data-atlas-note>HOME / UTC+8</p>
+
+
+
+
+
+            <dl class="atlas-data">
+
+
+              <div>
+
+
+<dt>LAT</dt>
+
+
+<dd data-atlas-lat>31.2304 N</dd>
+
+
+</div>
+
+
+              <div>
+
+
+<dt>LON</dt>
+
+
+<dd data-atlas-lon>121.4737 E</dd>
+
+
+</div>
+
+
+              <div>
+
+
+<dt>STATE</dt>
+
+
+<dd>SYNTHETIC</dd>
+
+
+</div>
+
+
+            </dl>
+
+
+          </div>
+
+
+        </section>
+
+
+
+
+
+        <section class="side-panel panel" aria-labelledby="atlas-log-title">
+
+
+          <div class="panel-bar">
+
+
+            <span id="atlas-log-title">SIGNAL LOG</span>
+
+
+            <span class="bar-state">● LIVE</span>
+
+
+          </div>
+
+
+          <div class="side-body">
+
+
+            <ul class="atlas-log">
+
+
+              <li>
+
+
+<time>00:00:01</time><span>NODE 01 / HANDSHAKE</span>
+
+
+</li>
+
+
+              <li>
+
+
+<time>00:00:04</time><span>MESH / 12 NODES</span>
+
+
+</li>
+
+
+              <li>
+
+
+<time>00:00:09</time><span>TRACE / STABLE</span>
+
+
+</li>
+
+
+            </ul>
+
+
+            <p class="atlas-log-note">NO DATA LEAVES THIS BROWSER</p>
+
+
+          </div>
+
+
+        </section>
+
+
+
+
+
+        <section class="side-panel panel" aria-labelledby="atlas-protocol-title">
+
+
+          <div class="panel-bar">
+
+
+            <span id="atlas-protocol-title">PROTOCOL</span>
+
+
+            <span>LOCAL</span>
+
+
+          </div>
+
+
+          <div class="side-body">
+
+
+            <dl class="atlas-protocol">
+
+
+              <div>
+
+
+<dt>READ</dt>
+
+
+<dd>HOVER / TRACE</dd>
+
+
+</div>
+
+
+              <div>
+
+
+<dt>LOCK</dt>
+
+
+<dd>CLICK / SELECT</dd>
+
+
+</div>
+
+
+              <div>
+
+
+<dt>KEYS</dt>
+
+
+<dd>TAB / ENTER</dd>
+
+
+</div>
+
+
+            </dl>
+
+
+            <p class="atlas-protocol-note">A MAP IS A WAY OF REMEMBERING DISTANCE.</p>
+
+
+          </div>
+
+
+        </section>
+
+
+      </aside>
+
+
+    </div>
+
+
+
+
+
+    <p class="atlas-disclaimer">DOT GEOMETRY / NATURAL EARTH 1:110M / PUBLIC DOMAIN / SYNTHETIC TELEMETRY</p>
+
+
+  </main>
+
+  <footer class="footer">
+
+
+      <span>© <span data-year>2026</span> HD 6</span>
+
+
+      <span class="footer-mid">BUILD 2026.11 / NO COOKIES / NO TRACKING · <a class="footer-link" href="https://github.com/hdsix-coder/chenjunnan.github.io" target="_blank" rel="noopener noreferrer">GITHUB / SOURCE</a></span>
+
+
+      <span class="footer-right">
+
+
+        <span data-footer-path="">PATH /atlas</span>
+
+
+        <span><span class="prompt">C:\&gt;</span><span class="cursor cursor--small" aria-hidden="true"></span></span>
+
+
+      </span>
+
+
+    </footer>
+
+  <aside class="deskpet" data-deskpet data-pet-state="idle" aria-label="站点桌宠：鲸鱼女仆小鲸与 WHALE_FM">
+
+
+      <div class="deskpet-bubble" data-pet-bubble role="status" aria-live="polite"></div>
+
+
+      <div class="deskpet-body" data-pet-hit role="button" tabindex="0" aria-label="桌宠小鲸：拖动或方向键移动；点击、回车或空格互动；长按抚摸；S 睡觉，D 跳舞，G 故障，P 摸头" title="点击互动，双击转圈；长按抚摸，P 摸头；S 睡觉，D 跳舞，G 故障">
+
+
+        <span class="deskpet-shadow" aria-hidden="true"></span>
+
+
+        <span class="deskpet-visual" aria-hidden="true">
+
+
+          <img src="assets/pet-whale.png" alt="" width="293" height="540" draggable="false">
+
+
+        </span>
+
+
+        <span class="deskpet-tag" aria-hidden="true"><span class="dot"></span>WHALE_MAID</span>
+
+
+      </div>
+
+
+  
+
+
+      <button class="deskpet-music" type="button" data-player-toggle aria-expanded="false" aria-controls="pet-player" aria-label="打开 WHALE_FM 歌单播放器" title="WHALE_FM / 打开歌单">
+
+
+        <span class="deskpet-disc" aria-hidden="true"></span>
+
+
+      </button>
+
+
+  
+
+
+      <section class="pet-player" id="pet-player" data-pet-player aria-labelledby="pet-player-title" hidden>
+
+
+        <header class="pet-player-head">
+
+
+          <p class="pet-player-brand" id="pet-player-title"><span class="dot" aria-hidden="true"></span>WHALE_FM <span class="pet-player-mode" data-player-status>READY</span></p>
+
+
+          <button class="pet-player-close" type="button" data-player-close aria-label="关闭歌单播放器">×</button>
+
+
+        </header>
+
+
+  
+
+
+        <div class="pet-player-now">
+
+
+          <span class="pet-player-index" data-player-index>01</span>
+
+
+          <div class="pet-player-meta">
+
+
+            <p class="pet-player-track" data-player-title aria-live="polite">CONCRETE FOUNDATION</p>
+
+
+            <p class="pet-player-sub" data-player-sub>HOW TO COUNT ONE TO TEN</p>
+
+
+          </div>
+
+
+          <span class="pet-player-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+
+
+        </div>
+
+
+  
+
+
+        <div class="pet-player-seek">
+
+
+          <span data-player-time>00:00</span>
+
+
+          <input type="range" data-player-seek min="0" max="1000" step="1" value="0" aria-label="播放进度">
+
+
+          <span data-player-duration>00:00</span>
+
+
+        </div>
+
+
+  
+
+
+        <div class="pet-player-controls">
+
+
+          <button type="button" data-player-prev aria-label="上一首">‹</button>
+
+
+          <button class="pet-player-play" type="button" data-player-play aria-label="播放">▶</button>
+
+
+          <button type="button" data-player-next aria-label="下一首">›</button>
+
+
+          <button class="pet-player-mute" type="button" data-player-mute aria-label="静音" aria-pressed="false">VOL</button>
+
+
+        </div>
+
+
+  
+
+
+        <div class="pet-player-vol">
+
+
+          <span>VOL</span>
+
+
+          <input type="range" data-player-volume min="0" max="100" step="1" value="35" aria-label="音量">
+
+
+          <span data-player-vol-value>35</span>
+
+
+        </div>
+
+
+  
+
+
+        <ol class="pet-playlist" data-player-list aria-label="WHALE_FM 歌单"></ol>
+
+
+        <div class="pet-upload">
+
+
+          <input type="file" data-player-file accept="audio/*,.mp3,.wav,.ogg,.m4a,.aac,.flac,.opus" multiple hidden>
+
+
+          <button class="pet-upload-btn" type="button" data-player-upload>+ 添加本地音乐</button>
+
+
+          <span class="pet-upload-hint">LOCAL FILE / SESSION ONLY</span>
+
+
+        </div>
+
+
+        <p class="pet-player-note" data-player-note>LOCAL AUDIO / 13 TRACKS / NO STREAM</p>
+
+
+      </section>
+
+
+  
+
+
+      <span class="deskpet-zzz" aria-hidden="true"><i>z</i><i>z</i><i>z</i></span>
+
+
+      <span class="deskpet-hearts" data-pet-hearts aria-hidden="true"></span>
+
+
+    </aside>
 </body>
 </html>

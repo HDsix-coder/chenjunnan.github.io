@@ -1,13 +1,1110 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=index.html#/blog">
-<title>BLOG — HD 6.OS</title>
-<script>location.replace("index.html#/blog");</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#050805">
+  <meta name="description" content="HD 6.OS build logs and notes: CSS, tooling, local-first, and long reads.">
+  <title>BLOG — HD 6.OS</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/atlas-data.js" defer></script>
+  <script src="assets/app.js" defer></script>
 </head>
-<body>
-<p>Redirecting to <a href="index.html#/blog">BLOG</a>…</p>
+<body data-page="blog">
+  <a class="skip-link" href="#main" data-skip-link="">SKIP TO CONTENT</a>
+  <div class="crt" aria-hidden="true"></div>
+  <canvas class="code-rain" data-code-rain aria-hidden="true"></canvas>
+
+  <header class="topbar">
+
+
+      <a class="brand" href="index.html" aria-label="HD 6.OS — TERMINAL v2.0 home">
+
+
+        <span class="brand-mark" aria-hidden="true">C</span>
+
+
+        <span class="brand-name">~/HD 6<span class="slash">.OS</span></span>
+
+
+        <span class="brand-ver">v2.0</span>
+
+
+      </a>
+
+
+      <nav class="nav" aria-label="Primary navigation">
+
+
+        <a href="about.html" data-nav-route="about"><span class="nav-num">/</span>about</a>
+
+
+        <a href="work.html" data-nav-route="work"><span class="nav-num">/</span>work</a>
+
+
+        <a href="blog.html" data-nav-route="blog" aria-current="page" class="is-active"><span class="nav-num">/</span>blog</a>
+
+
+        <a href="toolcase.html" data-nav-route="toolcase"><span class="nav-num">/</span>toolcase</a>
+
+
+        <a href="atlas.html" data-nav-route="atlas"><span class="nav-num">/</span>atlas</a>
+
+
+      </nav>
+
+
+      <div class="sysline">
+
+
+        <span class="sys-status"><span class="dot" aria-hidden="true"></span>ONLINE</span>
+
+
+        <span class="clock"><span class="clock-label">LOCAL</span> <span data-clock>--:--:--</span></span>
+
+
+      </div>
+
+
+    </header>
+
+  <main id="main" class="subpage blog-page" tabindex="-1" data-blog=""><div class="crumbline">
+
+
+      <span class="crumb-path">~/blog</span>
+
+
+      <span class="pagecode">PAGE 03 / 05</span>
+
+
+    </div>
+
+
+
+
+
+    <header class="pagehead">
+
+
+      <div>
+
+
+        <p class="eyebrow"><span class="bracket">[</span> SECTION 03 / NOTES <span class="bracket">]</span></p>
+
+
+        <h1 class="page-title">
+
+
+<span class="prompt">&gt;</span> tail -f /blog<span class="cursor cursor--small" aria-hidden="true"></span>
+
+
+</h1>
+
+
+        <p class="page-lede">Build logs, CSS notes, and the occasional long read. Entries are stored locally in this browser; no comments, no tracking.</p>
+
+
+      </div>
+
+
+      <dl class="filemeta">
+
+
+        <dt>FILE</dt>
+
+
+<dd>blog.log</dd>
+
+
+        <dt>MODE</dt>
+
+
+<dd>STREAM</dd>
+
+
+        <dt>UPDATED</dt>
+
+
+<dd>2026.11</dd>
+
+
+      </dl>
+
+
+    </header>
+
+
+
+
+
+    <figure class="media-figure media-figure--wide blog-cover">
+      <img src="assets/blog-cover.png" alt="Blog cover with green code-rain typography and the title /BLOG" width="1600" height="720" loading="lazy" decoding="async">
+      <figcaption><span><span class="media-index">00</span> / SIGNAL FADE</span><span>BUILD NOTES / 2026</span></figcaption>
+    </figure>
+
+    <div class="blog-toolbar">
+
+
+      <div class="blog-toolbar-copy">
+
+
+        <span class="eyebrow"><span class="bracket">[</span> LOCAL ENTRY STORE <span class="bracket">]</span></span>
+
+
+        <span class="blog-count" data-blog-count>07 ENTRIES</span>
+
+
+      </div>
+
+
+      <div class="blog-toolbar-actions">
+
+
+        <span class="blog-status" data-blog-status role="status" aria-live="polite"></span>
+
+
+        <button class="btn btn--quiet" type="button" data-blog-new aria-haspopup="dialog" hidden>+ NEW ENTRY</button>
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <article class="featured-post panel" aria-labelledby="featured-title" tabindex="-1" data-blog-featured>
+
+
+      <div class="featured-index">
+
+
+        <span class="eyebrow">FEATURED</span>
+
+
+        <span class="big" aria-hidden="true">01</span>
+
+
+        <div class="featured-meta">
+
+
+          <time datetime="2026-11-09" data-blog-featured-date>2026.11.09</time>
+
+
+          <span data-blog-featured-meta>DEVLOG / CSS / 8 MIN</span>
+
+
+        </div>
+
+
+      </div>
+
+
+      <div class="featured-copy">
+
+
+        <p class="eyebrow"><span class="bracket">[</span> FEATURED ENTRY <span class="bracket">]</span></p>
+
+
+        <h2 class="featured-title" id="featured-title" data-blog-featured-title>Why I rewrote my personal site again</h2>
+
+
+        <p class="featured-excerpt" data-blog-featured-excerpt>The last rewrite was two years ago. The old version wasn't broken; it just didn't feel like me anymore. So I pulled apart the centered card and rebuilt it as a full-screen green terminal, then asked again: what should this site show first?</p>
+
+
+        <div class="featured-bottom" data-blog-featured-bottom>
+
+
+          <span class="chip">DEVLOG</span>
+
+
+          <span class="chip">CSS</span>
+
+
+          <span class="chip">8 MIN</span>
+
+
+          <span class="pending">ENTRY PAGE / PENDING</span>
+
+
+        </div>
+
+
+      </div>
+
+
+    </article>
+
+
+
+
+
+    <div class="blog-grid">
+
+
+      <section class="post-list" aria-labelledby="entries-title" data-blog-list>
+
+
+        <h2 class="section-head" id="entries-title">
+
+
+<span class="idx">01 /</span> LOG ENTRIES <span class="idx">RECENT</span>
+
+
+</h2>
+
+
+        <div class="post-head" aria-hidden="true">
+
+
+          <span>DATE</span>
+
+
+          <span>ENTRY</span>
+
+
+          <span>TAGS</span>
+
+
+          <span>READ / PIN / DEL</span>
+
+
+        </div>
+
+
+
+
+
+        <article class="post-row">
+
+
+          <time class="post-date" datetime="2026-11-02">2026.11.02</time>
+
+
+          <div class="post-main">
+
+
+            <h3 class="post-title">How to draw a scanline that doesn't sting</h3>
+
+
+            <p class="post-excerpt">A scanline isn't just dark stripes over the page. The hard part is letting it live in the dark without stealing the text's air.</p>
+
+
+          </div>
+
+
+          <ul class="post-tags">
+
+
+            <li class="chip">CSS</li>
+
+
+            <li class="chip">DETAIL</li>
+
+
+          </ul>
+
+
+          <span class="post-read">05 MIN</span>
+
+
+        </article>
+
+
+
+
+
+        <article class="post-row">
+
+
+          <time class="post-date" datetime="2026-10-24">2026.10.24</time>
+
+
+          <div class="post-main">
+
+
+            <h3 class="post-title">Local first: keep tools in the browser</h3>
+
+
+            <p class="post-excerpt">Timestamps, JSON, contrast, and UUIDs need no server. Data never leaves the tab, and the whole backend disappears.</p>
+
+
+          </div>
+
+
+          <ul class="post-tags">
+
+
+            <li class="chip">JS</li>
+
+
+            <li class="chip">TOOLING</li>
+
+
+          </ul>
+
+
+          <span class="post-read">06 MIN</span>
+
+
+        </article>
+
+
+
+
+
+        <article class="post-row">
+
+
+          <time class="post-date" datetime="2026-10-11">2026.10.11</time>
+
+
+          <div class="post-main">
+
+
+            <h3 class="post-title">Why terminal palettes are always green</h3>
+
+
+            <p class="post-excerpt">From P1 phosphor to today's #33ff66: green was an early display compromise, then an atmosphere we chose.</p>
+
+
+          </div>
+
+
+          <ul class="post-tags">
+
+
+            <li class="chip">COLOR</li>
+
+
+            <li class="chip">DESIGN</li>
+
+
+          </ul>
+
+
+          <span class="post-read">04 MIN</span>
+
+
+        </article>
+
+
+
+
+
+        <article class="post-row">
+
+
+          <time class="post-date" datetime="2026-09-28">2026.09.28</time>
+
+
+          <div class="post-main">
+
+
+            <h3 class="post-title">A static site build checklist</h3>
+
+
+            <p class="post-excerpt">No framework, still discipline: directory rules, link checks, responsive captures, and a few commands before release.</p>
+
+
+          </div>
+
+
+          <ul class="post-tags">
+
+
+            <li class="chip">STATIC</li>
+
+
+            <li class="chip">PROCESS</li>
+
+
+          </ul>
+
+
+          <span class="post-read">07 MIN</span>
+
+
+        </article>
+
+
+
+
+
+        <article class="post-row">
+
+
+          <time class="post-date" datetime="2026-09-12">2026.09.12</time>
+
+
+          <div class="post-main">
+
+
+            <h3 class="post-title">My Git alias cheat sheet</h3>
+
+
+            <p class="post-excerpt">A few aliases worn into muscle memory. They didn't make Git simpler; they made it faster.</p>
+
+
+          </div>
+
+
+          <ul class="post-tags">
+
+
+            <li class="chip">GIT</li>
+
+
+            <li class="chip">NOTES</li>
+
+
+          </ul>
+
+
+          <span class="post-read">03 MIN</span>
+
+
+        </article>
+
+
+
+
+
+        <article class="post-row">
+
+
+          <time class="post-date" datetime="2026-08-30">2026.08.30</time>
+
+
+          <div class="post-main">
+
+
+            <h3 class="post-title">August reading: on interfaces and machines</h3>
+
+
+            <p class="post-excerpt">Three half-read books, one paper reread twice, and a clearer verdict: an interface is a machine's manners.</p>
+
+
+          </div>
+
+
+          <ul class="post-tags">
+
+
+            <li class="chip">READING</li>
+
+
+            <li class="chip">NOTES</li>
+
+
+          </ul>
+
+
+          <span class="post-read">05 MIN</span>
+
+
+        </article>
+
+
+
+
+
+        <div class="pending-note">
+
+
+          <span>ENTRY PAGES / PENDING</span>
+
+
+          <span>NO COMMENTS / NO TRACKING</span>
+
+
+        </div>
+
+
+        <button class="blog-more" type="button" data-blog-more hidden>LOAD MORE ENTRIES</button>
+
+
+      </section>
+
+
+
+
+
+      <aside class="sidebar" aria-label="Blog sidebar">
+
+
+        <section class="side-panel panel" aria-labelledby="tags-title">
+
+
+          <div class="panel-bar">
+
+
+            <span id="tags-title">TAGS</span>
+
+
+            <span data-blog-tag-count>07</span>
+
+
+          </div>
+
+
+          <div class="side-body">
+
+
+            <div class="tag-cloud" data-blog-tags>
+
+
+              <span class="chip">CSS</span>
+
+
+              <span class="chip">JS</span>
+
+
+              <span class="chip">DESIGN</span>
+
+
+              <span class="chip">TOOLING</span>
+
+
+              <span class="chip">STATIC</span>
+
+
+              <span class="chip">READING</span>
+
+
+              <span class="chip">NOTES</span>
+
+
+            </div>
+
+
+          </div>
+
+
+        </section>
+
+
+
+
+
+        <section class="side-panel panel" aria-labelledby="archive-title">
+
+
+          <div class="panel-bar">
+
+
+            <span id="archive-title">ARCHIVE</span>
+
+
+            <span data-blog-archive-year>2026</span>
+
+
+          </div>
+
+
+          <div class="side-body">
+
+
+            <ul class="archive-list" data-blog-archive>
+
+
+              <li>
+
+
+<span>2026.11</span><span class="count">02</span>
+
+
+</li>
+
+
+              <li>
+
+
+<span>2026.10</span><span class="count">02</span>
+
+
+</li>
+
+
+              <li>
+
+
+<span>2026.09</span><span class="count">02</span>
+
+
+</li>
+
+
+              <li>
+
+
+<span>2026.08</span><span class="count">01</span>
+
+
+</li>
+
+
+            </ul>
+
+
+          </div>
+
+
+        </section>
+
+
+
+
+
+        <section class="side-panel panel" aria-labelledby="now-title">
+
+
+          <div class="panel-bar">
+
+
+            <span id="now-title">NOW</span>
+
+
+            <span class="bar-state">● LIVE</span>
+
+
+          </div>
+
+
+          <div class="side-body">
+
+
+            <div class="now-box">
+
+
+              <span class="dot" aria-hidden="true"></span>
+
+
+              <p><strong>BUILDING V2.0</strong>Split the old single page into six pages and moved everyday tools into the browser. Next: article pages.</p>
+
+
+            </div>
+
+
+            <div class="rss-row">
+
+
+              <span class="pending">RSS FEED</span>
+
+
+              <span class="rss-disabled">SOON</span>
+
+
+            </div>
+
+
+          </div>
+
+
+        </section>
+
+
+      </aside>
+
+
+    </div>
+
+
+  <dialog class="entry-dialog" data-blog-editor aria-labelledby="entry-editor-title">
+
+
+    <form class="entry-shell" data-blog-form>
+
+
+      <header class="entry-head">
+
+
+        <div>
+
+
+          <p class="eyebrow"><span class="bracket">[</span> LOCAL WRITE / NEW ENTRY <span class="bracket">]</span></p>
+
+
+          <h2 class="entry-title" id="entry-editor-title">NEW ENTRY</h2>
+
+
+        </div>
+
+
+        <button class="entry-close" type="button" data-blog-editor-close aria-label="Close new entry window">×</button>
+
+
+      </header>
+
+
+
+
+
+      <div class="entry-grid">
+
+
+        <label class="entry-field">
+
+
+          <span>DATE</span>
+
+
+          <input type="date" name="date" data-blog-date required>
+
+
+        </label>
+
+
+        <label class="entry-field">
+
+
+          <span>TITLE</span>
+
+
+          <input type="text" name="title" data-blog-title maxlength="120" placeholder="A title worth pinning" required>
+
+
+        </label>
+
+
+        <label class="entry-field entry-field--wide">
+
+
+          <span>TAGS</span>
+
+
+          <input type="text" name="tags" data-blog-tags-input maxlength="120" placeholder="CSS, NOTES, DEVLOG">
+
+
+        </label>
+
+
+        <label class="entry-field entry-field--wide">
+
+
+          <span>CONTENT</span>
+
+
+          <textarea name="content" data-blog-content rows="8" placeholder="Write the entry..." required></textarea>
+
+
+        </label>
+
+
+        <label class="entry-check">
+
+
+          <input type="checkbox" name="pin" data-blog-pin-new checked>
+
+
+          <span>PIN AS FEATURED</span>
+
+
+        </label>
+
+
+      </div>
+
+
+
+
+
+      <footer class="entry-actions">
+
+
+        <span class="entry-note">LOCAL STORAGE / NO SERVER</span>
+
+
+        <div class="entry-buttons">
+
+
+          <button class="btn btn--quiet" type="button" data-blog-editor-close>CANCEL</button>
+
+
+          <button class="btn" type="submit">PUBLISH</button>
+
+
+        </div>
+
+
+      </footer>
+
+
+      <p class="entry-msg" data-blog-form-msg role="status" aria-live="polite"></p>
+
+
+    </form>
+
+
+  </dialog>
+
+
+
+
+
+  <dialog class="entry-dialog entry-reader" data-blog-reader aria-labelledby="entry-reader-title">
+
+
+    <div class="entry-shell">
+
+
+      <header class="entry-head">
+
+
+        <div>
+
+
+          <p class="eyebrow"><span class="bracket">[</span> LOCAL READ / ENTRY <span class="bracket">]</span></p>
+
+
+          <h2 class="entry-title">ENTRY</h2>
+
+
+        </div>
+
+
+        <button class="entry-close" type="button" data-blog-reader-close aria-label="Close entry reader">×</button>
+
+
+      </header>
+
+
+      <div class="entry-reader-body">
+
+
+        <p class="entry-reader-meta" data-blog-reader-meta></p>
+
+
+        <h3 class="entry-reader-title" id="entry-reader-title" data-blog-reader-title></h3>
+
+
+        <ul class="post-tags entry-reader-tags" data-blog-reader-tags></ul>
+
+
+        <div class="entry-reader-content" data-blog-reader-content></div>
+
+
+        <p class="entry-note" data-blog-reader-source></p>
+
+
+      </div>
+
+
+    </div>
+
+
+  </dialog>
+
+
+
+
+
+  </main>
+
+  <footer class="footer">
+
+
+      <span>© <span data-year>2026</span> HD 6</span>
+
+
+      <span class="footer-mid">BUILD 2026.11 / NO COOKIES / NO TRACKING · <a class="footer-link" href="https://github.com/hdsix-coder/chenjunnan.github.io" target="_blank" rel="noopener noreferrer">GITHUB / SOURCE</a></span>
+
+
+      <span class="footer-right">
+
+
+        <span data-footer-path="">PATH /blog</span>
+
+
+        <span><span class="prompt">C:\&gt;</span><span class="cursor cursor--small" aria-hidden="true"></span></span>
+
+
+      </span>
+
+
+    </footer>
+
+  <aside class="deskpet" data-deskpet data-pet-state="idle" aria-label="站点桌宠：鲸鱼女仆小鲸与 WHALE_FM">
+
+
+      <div class="deskpet-bubble" data-pet-bubble role="status" aria-live="polite"></div>
+
+
+      <div class="deskpet-body" data-pet-hit role="button" tabindex="0" aria-label="桌宠小鲸：拖动或方向键移动；点击、回车或空格互动；长按抚摸；S 睡觉，D 跳舞，G 故障，P 摸头" title="点击互动，双击转圈；长按抚摸，P 摸头；S 睡觉，D 跳舞，G 故障">
+
+
+        <span class="deskpet-shadow" aria-hidden="true"></span>
+
+
+        <span class="deskpet-visual" aria-hidden="true">
+
+
+          <img src="assets/pet-whale.png" alt="" width="293" height="540" draggable="false">
+
+
+        </span>
+
+
+        <span class="deskpet-tag" aria-hidden="true"><span class="dot"></span>WHALE_MAID</span>
+
+
+      </div>
+
+
+  
+
+
+      <button class="deskpet-music" type="button" data-player-toggle aria-expanded="false" aria-controls="pet-player" aria-label="打开 WHALE_FM 歌单播放器" title="WHALE_FM / 打开歌单">
+
+
+        <span class="deskpet-disc" aria-hidden="true"></span>
+
+
+      </button>
+
+
+  
+
+
+      <section class="pet-player" id="pet-player" data-pet-player aria-labelledby="pet-player-title" hidden>
+
+
+        <header class="pet-player-head">
+
+
+          <p class="pet-player-brand" id="pet-player-title"><span class="dot" aria-hidden="true"></span>WHALE_FM <span class="pet-player-mode" data-player-status>READY</span></p>
+
+
+          <button class="pet-player-close" type="button" data-player-close aria-label="关闭歌单播放器">×</button>
+
+
+        </header>
+
+
+  
+
+
+        <div class="pet-player-now">
+
+
+          <span class="pet-player-index" data-player-index>01</span>
+
+
+          <div class="pet-player-meta">
+
+
+            <p class="pet-player-track" data-player-title aria-live="polite">CONCRETE FOUNDATION</p>
+
+
+            <p class="pet-player-sub" data-player-sub>HOW TO COUNT ONE TO TEN</p>
+
+
+          </div>
+
+
+          <span class="pet-player-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+
+
+        </div>
+
+
+  
+
+
+        <div class="pet-player-seek">
+
+
+          <span data-player-time>00:00</span>
+
+
+          <input type="range" data-player-seek min="0" max="1000" step="1" value="0" aria-label="播放进度">
+
+
+          <span data-player-duration>00:00</span>
+
+
+        </div>
+
+
+  
+
+
+        <div class="pet-player-controls">
+
+
+          <button type="button" data-player-prev aria-label="上一首">‹</button>
+
+
+          <button class="pet-player-play" type="button" data-player-play aria-label="播放">▶</button>
+
+
+          <button type="button" data-player-next aria-label="下一首">›</button>
+
+
+          <button class="pet-player-mute" type="button" data-player-mute aria-label="静音" aria-pressed="false">VOL</button>
+
+
+        </div>
+
+
+  
+
+
+        <div class="pet-player-vol">
+
+
+          <span>VOL</span>
+
+
+          <input type="range" data-player-volume min="0" max="100" step="1" value="35" aria-label="音量">
+
+
+          <span data-player-vol-value>35</span>
+
+
+        </div>
+
+
+  
+
+
+        <ol class="pet-playlist" data-player-list aria-label="WHALE_FM 歌单"></ol>
+
+
+        <div class="pet-upload">
+
+
+          <input type="file" data-player-file accept="audio/*,.mp3,.wav,.ogg,.m4a,.aac,.flac,.opus" multiple hidden>
+
+
+          <button class="pet-upload-btn" type="button" data-player-upload>+ 添加本地音乐</button>
+
+
+          <span class="pet-upload-hint">LOCAL FILE / SESSION ONLY</span>
+
+
+        </div>
+
+
+        <p class="pet-player-note" data-player-note>LOCAL AUDIO / 13 TRACKS / NO STREAM</p>
+
+
+      </section>
+
+
+  
+
+
+      <span class="deskpet-zzz" aria-hidden="true"><i>z</i><i>z</i><i>z</i></span>
+
+
+      <span class="deskpet-hearts" data-pet-hearts aria-hidden="true"></span>
+
+
+    </aside>
 </body>
 </html>

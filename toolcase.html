@@ -1,13 +1,1113 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=index.html#/toolcase">
-<title>TOOLCASE — HD 6.OS</title>
-<script>location.replace("index.html#/toolcase");</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#050805">
+  <meta name="description" content="HD 6.OS local toolbox: nine tools for time, JSON, contrast, UUID, Base64, Morse, Caesar, base conversion, and mirage-tank images. All data stays in the browser.">
+  <title>TOOLCASE — HD 6.OS</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/atlas-data.js" defer></script>
+  <script src="assets/app.js" defer></script>
 </head>
-<body>
-<p>Redirecting to <a href="index.html#/toolcase">TOOLCASE</a>…</p>
+<body data-page="toolcase">
+  <a class="skip-link" href="#main" data-skip-link="">SKIP TO CONTENT</a>
+  <div class="crt" aria-hidden="true"></div>
+  <canvas class="code-rain" data-code-rain aria-hidden="true"></canvas>
+
+  <header class="topbar">
+
+
+      <a class="brand" href="index.html" aria-label="HD 6.OS — TERMINAL v2.0 home">
+
+
+        <span class="brand-mark" aria-hidden="true">C</span>
+
+
+        <span class="brand-name">~/HD 6<span class="slash">.OS</span></span>
+
+
+        <span class="brand-ver">v2.0</span>
+
+
+      </a>
+
+
+      <nav class="nav" aria-label="Primary navigation">
+
+
+        <a href="about.html" data-nav-route="about"><span class="nav-num">/</span>about</a>
+
+
+        <a href="work.html" data-nav-route="work"><span class="nav-num">/</span>work</a>
+
+
+        <a href="blog.html" data-nav-route="blog"><span class="nav-num">/</span>blog</a>
+
+
+        <a href="toolcase.html" data-nav-route="toolcase" aria-current="page" class="is-active"><span class="nav-num">/</span>toolcase</a>
+
+
+        <a href="atlas.html" data-nav-route="atlas"><span class="nav-num">/</span>atlas</a>
+
+
+      </nav>
+
+
+      <div class="sysline">
+
+
+        <span class="sys-status"><span class="dot" aria-hidden="true"></span>ONLINE</span>
+
+
+        <span class="clock"><span class="clock-label">LOCAL</span> <span data-clock>--:--:--</span></span>
+
+
+      </div>
+
+
+    </header>
+
+  <main id="main" class="subpage" tabindex="-1"><div class="crumbline">
+
+
+      <span class="crumb-path">~/toolcase</span>
+
+
+      <span class="pagecode">PAGE 04 / 05</span>
+
+
+    </div>
+
+
+
+
+
+    <header class="pagehead">
+
+
+      <div>
+
+
+        <p class="eyebrow"><span class="bracket">[</span> SECTION 04 / UTILITIES <span class="bracket">]</span></p>
+
+
+        <h1 class="page-title">
+
+
+<span class="prompt">&gt;</span> ./toolcase --list<span class="cursor cursor--small" aria-hidden="true"></span>
+
+
+</h1>
+
+
+        <p class="page-lede">Nine small tools that finish in a tab. No requests, no accounts, no data leaving this machine.</p>
+
+
+      </div>
+
+
+      <dl class="filemeta">
+
+
+        <dt>FILE</dt>
+
+
+<dd>tools.html</dd>
+
+
+        <dt>MODE</dt>
+
+
+<dd>LOCAL</dd>
+
+
+        <dt>UPDATED</dt>
+
+
+<dd>2026.11</dd>
+
+
+      </dl>
+
+
+    </header>
+
+
+
+
+
+    <figure class="media-figure media-figure--wide toolcase-plate">
+      <img src="assets/toolcase-plate.jpg" alt="Close-up of the toolcase grid with timestamp, JSON, contrast, UUID, Base64, Morse, Caesar, and base-conversion panels" width="1200" height="833" loading="lazy" decoding="async">
+      <figcaption><span><span class="media-index">09</span> / TOOL MATRIX</span><span>LOCAL TOOLS / NO SERVER</span></figcaption>
+    </figure>
+
+    <div class="tool-grid">
+
+
+      <section class="tool tool--ts" aria-labelledby="tool-ts-title">
+
+
+        <div class="tool-bar">
+
+
+          <h2 class="tool-name" id="tool-ts-title">T01 / TIMESTAMP</h2>
+
+
+          <span class="status-tag">LOCAL</span>
+
+
+        </div>
+
+
+        <div class="tool-body">
+
+
+          <form class="tool-form" id="timestamp-form" novalidate>
+
+
+            <label class="field" for="ts-input">UNIX / DATE
+
+
+              <input id="ts-input" name="timestamp" type="text" autocomplete="off" spellcheck="false" placeholder="1762761600 or 2026-11-09 21:00">
+
+
+            </label>
+
+
+            <div class="tool-actions">
+
+
+              <button class="tbtn" type="submit">CONVERT</button>
+
+
+              <button class="tbtn tbtn--quiet" type="button" data-ts-now>NOW</button>
+
+
+            </div>
+
+
+          </form>
+
+
+          <output class="console-out" id="ts-output" for="ts-input">--</output>
+
+
+          <p class="tool-msg" id="ts-msg" role="status" aria-live="polite">READY / LOCAL TIME</p>
+
+
+        </div>
+
+
+      </section>
+
+
+
+
+
+      <section class="tool tool--json" aria-labelledby="tool-json-title">
+
+
+        <div class="tool-bar">
+
+
+          <h2 class="tool-name" id="tool-json-title">T02 / JSON</h2>
+
+
+          <span class="status-tag">UTF-8</span>
+
+
+        </div>
+
+
+        <div class="tool-body">
+
+
+          <form class="tool-form" id="json-form" novalidate>
+
+
+            <label class="field" for="json-input">INPUT / JSON
+
+
+              <textarea id="json-input" name="json" spellcheck="false" placeholder='{"hello": "world"}'></textarea>
+
+
+            </label>
+
+
+            <div class="tool-actions">
+
+
+              <button class="tbtn" type="submit" data-json-mode="format">FORMAT</button>
+
+
+              <button class="tbtn tbtn--quiet" type="submit" data-json-mode="minify">MINIFY</button>
+
+
+              <button class="tbtn tbtn--quiet" type="button" data-json-clear>CLEAR</button>
+
+
+            </div>
+
+
+          </form>
+
+
+          <output class="console-out console-json" id="json-output" for="json-input">// AWAITING INPUT</output>
+
+
+          <p class="tool-msg" id="json-msg" role="status" aria-live="polite">READY / UTF-8</p>
+
+
+        </div>
+
+
+      </section>
+
+
+
+
+
+      <section class="tool tool--contrast" aria-labelledby="tool-contrast-title">
+
+
+        <div class="tool-bar">
+
+
+          <h2 class="tool-name" id="tool-contrast-title">T03 / CONTRAST</h2>
+
+
+          <span class="status-tag">WCAG</span>
+
+
+        </div>
+
+
+        <div class="tool-body">
+
+
+          <div class="tool-form">
+
+
+            <div class="color-row">
+
+
+              <label class="field" for="contrast-fg">FOREGROUND
+
+
+                <input id="contrast-fg" type="color" value="#33ff66">
+
+
+              </label>
+
+
+              <label class="field" for="contrast-bg">BACKGROUND
+
+
+                <input id="contrast-bg" type="color" value="#050805">
+
+
+              </label>
+
+
+            </div>
+
+
+            <div class="ratio-box">
+
+
+              <span class="ratio" id="contrast-ratio">--.--:1</span>
+
+
+              <span class="ratio-label">CONTRAST RATIO</span>
+
+
+            </div>
+
+
+            <ul class="contrast-badges" id="contrast-badges" aria-label="WCAG contrast levels">
+
+
+              <li data-level="aa-normal">
+
+
+<span>AA NORMAL</span><b>--</b>
+
+
+</li>
+
+
+              <li data-level="aaa-normal">
+
+
+<span>AAA NORMAL</span><b>--</b>
+
+
+</li>
+
+
+              <li data-level="aa-large">
+
+
+<span>AA LARGE</span><b>--</b>
+
+
+</li>
+
+
+              <li data-level="aaa-large">
+
+
+<span>AAA LARGE</span><b>--</b>
+
+
+</li>
+
+
+            </ul>
+
+
+            <div class="contrast-preview" id="contrast-preview">
+
+
+              <span>AA TEXT PREVIEW / The quick brown fox</span>
+
+
+              <small>14PX REGULAR / SAMPLE</small>
+
+
+            </div>
+
+
+          </div>
+
+
+          <p class="tool-msg" id="contrast-msg" role="status" aria-live="polite">LIVE / NO NETWORK</p>
+
+
+        </div>
+
+
+      </section>
+
+
+
+
+
+      <section class="tool tool--uuid" aria-labelledby="tool-uuid-title">
+
+
+        <div class="tool-bar">
+
+
+          <h2 class="tool-name" id="tool-uuid-title">T04 / UUID</h2>
+
+
+          <span class="status-tag">V4</span>
+
+
+        </div>
+
+
+        <div class="tool-body">
+
+
+          <div class="tool-actions">
+
+
+            <button class="tbtn" type="button" data-uuid-generate>GENERATE 5</button>
+
+
+            <button class="tbtn tbtn--quiet" type="button" data-uuid-copy>COPY ALL</button>
+
+
+          </div>
+
+
+          <output class="console-out console-uuid" id="uuid-output">--</output>
+
+
+          <p class="tool-msg" id="uuid-msg" role="status" aria-live="polite">UUID V4 / LOCAL CRYPTO</p>
+
+
+        </div>
+
+
+      </section>
+
+
+
+
+
+      <section class="tool tool--base64" aria-labelledby="tool-b64-title">
+
+
+        <div class="tool-bar">
+
+
+          <h2 class="tool-name" id="tool-b64-title">T05 / BASE64</h2>
+
+
+          <span class="status-tag">UTF-8</span>
+
+
+        </div>
+
+
+        <div class="tool-body">
+
+
+          <form class="tool-form" id="base64-form" novalidate>
+
+
+            <label class="field" for="b64-input">INPUT / TEXT OR BASE64
+
+
+              <textarea id="b64-input" name="base64" spellcheck="false" placeholder="hello, world_"></textarea>
+
+
+            </label>
+
+
+            <div class="tool-actions">
+
+
+              <button class="tbtn" type="submit" data-b64-mode="encode">ENCODE</button>
+
+
+              <button class="tbtn tbtn--quiet" type="submit" data-b64-mode="decode">DECODE</button>
+
+
+              <button class="tbtn tbtn--quiet" type="button" data-b64-copy>COPY</button>
+
+
+              <button class="tbtn tbtn--quiet" type="button" data-b64-clear>CLEAR</button>
+
+
+            </div>
+
+
+          </form>
+
+
+          <output class="console-out" id="b64-output" for="b64-input">// AWAITING INPUT</output>
+
+
+          <p class="tool-msg" id="b64-msg" role="status" aria-live="polite">READY / UTF-8</p>
+
+
+        </div>
+
+
+      </section>
+
+
+
+
+
+      <section class="tool tool--morse" aria-labelledby="tool-morse-title">
+
+
+        <div class="tool-bar">
+
+
+          <h2 class="tool-name" id="tool-morse-title">T06 / MORSE</h2>
+
+
+          <span class="status-tag">A-Z / 0-9</span>
+
+
+        </div>
+
+
+        <div class="tool-body">
+
+
+          <form class="tool-form" id="morse-form" novalidate>
+
+
+            <label class="field" for="morse-input">INPUT / TEXT OR MORSE
+
+
+              <textarea id="morse-input" name="morse" spellcheck="false" placeholder="SOS / HELLO WORLD"></textarea>
+
+
+            </label>
+
+
+            <div class="tool-actions">
+
+
+              <button class="tbtn" type="submit" data-morse-mode="encode">ENCODE</button>
+
+
+              <button class="tbtn tbtn--quiet" type="submit" data-morse-mode="decode">DECODE</button>
+
+
+              <button class="tbtn tbtn--quiet" type="button" data-morse-copy>COPY</button>
+
+
+              <button class="tbtn tbtn--quiet" type="button" data-morse-clear>CLEAR</button>
+
+
+            </div>
+
+
+          </form>
+
+
+          <output class="console-out" id="morse-output" for="morse-input">// AWAITING INPUT</output>
+
+
+          <p class="tool-msg" id="morse-msg" role="status" aria-live="polite">READY / . AND -</p>
+
+
+        </div>
+
+
+      </section>
+
+
+
+
+
+      <section class="tool tool--caesar" aria-labelledby="tool-caesar-title">
+
+
+        <div class="tool-bar">
+
+
+          <h2 class="tool-name" id="tool-caesar-title">T07 / CAESAR</h2>
+
+
+          <span class="status-tag">SHIFT 1-25</span>
+
+
+        </div>
+
+
+        <div class="tool-body">
+
+
+          <form class="tool-form" id="caesar-form" novalidate>
+
+
+            <label class="field" for="caesar-input">INPUT / PLAINTEXT
+
+
+              <textarea id="caesar-input" name="caesar" spellcheck="false" placeholder="Meet me at the terminal."></textarea>
+
+
+            </label>
+
+
+            <label class="field" for="caesar-shift">SHIFT / 1-25
+
+
+              <input id="caesar-shift" name="shift" type="number" min="1" max="25" step="1" value="3" inputmode="numeric">
+
+
+            </label>
+
+
+            <div class="tool-actions">
+
+
+              <button class="tbtn" type="submit" data-caesar-mode="encode">ENCODE</button>
+
+
+              <button class="tbtn tbtn--quiet" type="submit" data-caesar-mode="decode">DECODE</button>
+
+
+              <button class="tbtn tbtn--quiet" type="button" data-caesar-copy>COPY</button>
+
+
+              <button class="tbtn tbtn--quiet" type="button" data-caesar-clear>CLEAR</button>
+
+
+            </div>
+
+
+          </form>
+
+
+          <output class="console-out" id="caesar-output" for="caesar-input">// AWAITING INPUT</output>
+
+
+          <p class="tool-msg" id="caesar-msg" role="status" aria-live="polite">READY / A-Z ONLY</p>
+
+
+        </div>
+
+
+      </section>
+
+
+
+
+
+      <section class="tool tool--base" aria-labelledby="tool-base-title">
+
+
+        <div class="tool-bar">
+
+
+          <h2 class="tool-name" id="tool-base-title">T08 / BASE CONVERT</h2>
+
+
+          <span class="status-tag">BIGINT</span>
+
+
+        </div>
+
+
+        <div class="tool-body">
+
+
+          <form class="tool-form" id="base-form" novalidate>
+
+
+            <div class="field-row">
+
+
+              <label class="field" for="base-input">VALUE
+
+
+                <input id="base-input" name="value" type="text" autocomplete="off" spellcheck="false" placeholder="1010">
+
+
+              </label>
+
+
+              <label class="field" for="base-from">FROM BASE
+
+
+                <select id="base-from" name="from">
+
+
+                  <option value="2">02 / BINARY</option>
+
+
+                  <option value="8">08 / OCTAL</option>
+
+
+                  <option value="10" selected>10 / DECIMAL</option>
+
+
+                  <option value="16">16 / HEX</option>
+
+
+                </select>
+
+
+              </label>
+
+
+            </div>
+
+
+            <div class="tool-actions">
+
+
+              <button class="tbtn" type="submit">CONVERT</button>
+
+
+              <button class="tbtn tbtn--quiet" type="button" data-base-copy>COPY</button>
+
+
+              <button class="tbtn tbtn--quiet" type="button" data-base-clear>CLEAR</button>
+
+
+            </div>
+
+
+          </form>
+
+
+          <output class="console-out" id="base-output" for="base-input">// AWAITING INPUT</output>
+
+
+          <p class="tool-msg" id="base-msg" role="status" aria-live="polite">BASE 2 / 8 / 10 / 16 · PREFIX 0b 0o 0x</p>
+
+
+        </div>
+
+
+      </section>
+
+
+
+
+
+      <section class="tool tool--mirage" data-mirage aria-labelledby="tool-mirage-title">
+
+
+        <div class="tool-bar">
+
+
+          <h2 class="tool-name" id="tool-mirage-title">T09 / MIRAGE TANK</h2>
+
+
+          <span class="status-tag">PNG / LOCAL</span>
+
+
+        </div>
+
+
+        <div class="tool-body">
+
+
+          <p class="mirage-lede">Two images. One transparent PNG. Put it on black or white and the matching side appears. Import both sides, generate, then download. The white-side image must be brighter than the black-side image for the composite to hold.</p>
+
+
+          <div class="mirage-grid">
+
+
+            <label class="mirage-drop" for="mirage-black">
+
+
+              <input id="mirage-black" data-mirage-input data-mirage-side="black" type="file" accept="image/*">
+
+
+              <img class="mirage-preview" data-mirage-preview="black" alt="" hidden>
+
+
+              <span class="mirage-drop-label">01 / BLACK SIDE</span>
+
+
+              <span class="mirage-drop-hint">IMAGE SEEN ON BLACK</span>
+
+
+              <span class="mirage-drop-file" data-mirage-name="black">SELECT IMAGE</span>
+
+
+            </label>
+
+
+            <label class="mirage-drop" for="mirage-white">
+
+
+              <input id="mirage-white" data-mirage-input data-mirage-side="white" type="file" accept="image/*">
+
+
+              <img class="mirage-preview" data-mirage-preview="white" alt="" hidden>
+
+
+              <span class="mirage-drop-label">02 / WHITE SIDE</span>
+
+
+              <span class="mirage-drop-hint">IMAGE SEEN ON WHITE</span>
+
+
+              <span class="mirage-drop-file" data-mirage-name="white">SELECT IMAGE</span>
+
+
+            </label>
+
+
+          </div>
+
+
+          <div class="tool-actions">
+
+
+            <button class="tbtn" type="button" data-mirage-generate>GENERATE</button>
+
+
+            <a class="tbtn tbtn--quiet" data-mirage-download download="mirage-tank.png" hidden>DOWNLOAD PNG</a>
+
+
+            <button class="tbtn tbtn--quiet" type="button" data-mirage-clear>CLEAR</button>
+
+
+          </div>
+
+
+          <div class="mirage-output" data-mirage-output hidden>
+
+
+            <figure class="mirage-pane mirage-pane--dark">
+
+
+              <figcaption>ON BLACK</figcaption>
+
+
+              <img data-mirage-dark alt="Mirage tank image shown on a black background">
+
+
+            </figure>
+
+
+            <figure class="mirage-pane mirage-pane--light">
+
+
+              <figcaption>ON WHITE</figcaption>
+
+
+              <img data-mirage-light alt="Mirage tank image shown on a white background">
+
+
+            </figure>
+
+
+          </div>
+
+
+          <p class="tool-msg" id="mirage-msg" role="status" aria-live="polite">READY / TWO IMAGES REQUIRED</p>
+
+
+          <p class="mirage-note">OPTICAL COMPOSITE / WHITE SIDE MUST BE BRIGHTER / NOT ENCRYPTION</p>
+
+
+        </div>
+
+
+      </section>
+
+
+    </div>
+
+
+
+
+
+    <noscript>
+
+
+      <p class="noscript-note">!! JAVASCRIPT IS OFF / These tools need a script-enabled browser. Nothing is sent anywhere, but the tools are unavailable.</p>
+
+
+    </noscript>
+
+
+
+
+
+    <section class="cta-strip panel" aria-labelledby="toolcase-cta">
+
+
+      <div>
+
+
+        <h2 id="toolcase-cta">LOCAL ONLY</h2>
+
+
+        <p>All computation happens in this tab. No requests, no storage, no analytics.</p>
+
+
+      </div>
+
+
+      <span class="chip">NO DATA LEAVES THIS BROWSER</span>
+
+
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+
+
+      <span>© <span data-year>2026</span> HD 6</span>
+
+
+      <span class="footer-mid">BUILD 2026.11 / NO COOKIES / NO TRACKING · <a class="footer-link" href="https://github.com/hdsix-coder/chenjunnan.github.io" target="_blank" rel="noopener noreferrer">GITHUB / SOURCE</a></span>
+
+
+      <span class="footer-right">
+
+
+        <span data-footer-path="">PATH /toolcase</span>
+
+
+        <span><span class="prompt">C:\&gt;</span><span class="cursor cursor--small" aria-hidden="true"></span></span>
+
+
+      </span>
+
+
+    </footer>
+
+  <aside class="deskpet" data-deskpet data-pet-state="idle" aria-label="站点桌宠：鲸鱼女仆小鲸与 WHALE_FM">
+
+
+      <div class="deskpet-bubble" data-pet-bubble role="status" aria-live="polite"></div>
+
+
+      <div class="deskpet-body" data-pet-hit role="button" tabindex="0" aria-label="桌宠小鲸：拖动或方向键移动；点击、回车或空格互动；长按抚摸；S 睡觉，D 跳舞，G 故障，P 摸头" title="点击互动，双击转圈；长按抚摸，P 摸头；S 睡觉，D 跳舞，G 故障">
+
+
+        <span class="deskpet-shadow" aria-hidden="true"></span>
+
+
+        <span class="deskpet-visual" aria-hidden="true">
+
+
+          <img src="assets/pet-whale.png" alt="" width="293" height="540" draggable="false">
+
+
+        </span>
+
+
+        <span class="deskpet-tag" aria-hidden="true"><span class="dot"></span>WHALE_MAID</span>
+
+
+      </div>
+
+
+  
+
+
+      <button class="deskpet-music" type="button" data-player-toggle aria-expanded="false" aria-controls="pet-player" aria-label="打开 WHALE_FM 歌单播放器" title="WHALE_FM / 打开歌单">
+
+
+        <span class="deskpet-disc" aria-hidden="true"></span>
+
+
+      </button>
+
+
+  
+
+
+      <section class="pet-player" id="pet-player" data-pet-player aria-labelledby="pet-player-title" hidden>
+
+
+        <header class="pet-player-head">
+
+
+          <p class="pet-player-brand" id="pet-player-title"><span class="dot" aria-hidden="true"></span>WHALE_FM <span class="pet-player-mode" data-player-status>READY</span></p>
+
+
+          <button class="pet-player-close" type="button" data-player-close aria-label="关闭歌单播放器">×</button>
+
+
+        </header>
+
+
+  
+
+
+        <div class="pet-player-now">
+
+
+          <span class="pet-player-index" data-player-index>01</span>
+
+
+          <div class="pet-player-meta">
+
+
+            <p class="pet-player-track" data-player-title aria-live="polite">CONCRETE FOUNDATION</p>
+
+
+            <p class="pet-player-sub" data-player-sub>HOW TO COUNT ONE TO TEN</p>
+
+
+          </div>
+
+
+          <span class="pet-player-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+
+
+        </div>
+
+
+  
+
+
+        <div class="pet-player-seek">
+
+
+          <span data-player-time>00:00</span>
+
+
+          <input type="range" data-player-seek min="0" max="1000" step="1" value="0" aria-label="播放进度">
+
+
+          <span data-player-duration>00:00</span>
+
+
+        </div>
+
+
+  
+
+
+        <div class="pet-player-controls">
+
+
+          <button type="button" data-player-prev aria-label="上一首">‹</button>
+
+
+          <button class="pet-player-play" type="button" data-player-play aria-label="播放">▶</button>
+
+
+          <button type="button" data-player-next aria-label="下一首">›</button>
+
+
+          <button class="pet-player-mute" type="button" data-player-mute aria-label="静音" aria-pressed="false">VOL</button>
+
+
+        </div>
+
+
+  
+
+
+        <div class="pet-player-vol">
+
+
+          <span>VOL</span>
+
+
+          <input type="range" data-player-volume min="0" max="100" step="1" value="35" aria-label="音量">
+
+
+          <span data-player-vol-value>35</span>
+
+
+        </div>
+
+
+  
+
+
+        <ol class="pet-playlist" data-player-list aria-label="WHALE_FM 歌单"></ol>
+
+
+        <div class="pet-upload">
+
+
+          <input type="file" data-player-file accept="audio/*,.mp3,.wav,.ogg,.m4a,.aac,.flac,.opus" multiple hidden>
+
+
+          <button class="pet-upload-btn" type="button" data-player-upload>+ 添加本地音乐</button>
+
+
+          <span class="pet-upload-hint">LOCAL FILE / SESSION ONLY</span>
+
+
+        </div>
+
+
+        <p class="pet-player-note" data-player-note>LOCAL AUDIO / 13 TRACKS / NO STREAM</p>
+
+
+      </section>
+
+
+  
+
+
+      <span class="deskpet-zzz" aria-hidden="true"><i>z</i><i>z</i><i>z</i></span>
+
+
+      <span class="deskpet-hearts" data-pet-hearts aria-hidden="true"></span>
+
+
+    </aside>
 </body>
 </html>
